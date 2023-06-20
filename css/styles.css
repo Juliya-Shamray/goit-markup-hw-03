@@ -51,15 +51,18 @@ body {
     padding-bottom: 120px;
 }
 
-.hidden {
+.visually-hidden {
     position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
     width: 1px;
+    height: 1px;
     margin: -1px;
-    padding: 0;
     border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .button {
@@ -80,7 +83,6 @@ body {
 .button:focus {
     background-color: var(--ocean);
     color: var(--white);
-    border: 1px solid transparent;
 }
 
 .title {
@@ -247,14 +249,12 @@ body {
 }
 
 /* =======================  End Advantages  ================= */
-.advantages {
-    padding-bottom: 60px;
-}
+
 
 
 /* ======================= Start Work  ======================= */
 .work {
-    padding-top: 60px;
+    padding-top: 0;
 }
 
 .work-list {
@@ -334,6 +334,11 @@ body {
 .portfolio-filter .button {
     padding: 12px 24px;
     border: 1px solid var(--cornflower)
+}
+
+.portfolio-filter .button:hover,
+.portfolio-filter .button:focus {
+    border: 1px solid transparent;
 }
 
 .portfolio-list {
